@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #242524;
+        }
+        li,a button{
+            font-size: 16px;
+            font-weight: 500;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="items">
+            <li class="nav-item"><a href="">HOME</a></li>
+            <li class="nav-item"><a href="">about</a></li>
+            <li class="nav-item"><a href="">products
+            </a></li>
+        </ul>
+        <button>Contact Us</button>
+    </nav>
+</header>
+<?php
+$target =mktime(0,0,0,7,1,2022);
+$today = time();
+$difference = ($target -$today);
+$days =(int)($difference/86400);
+print"Our event will occur in $days days";
+?>
+</body>
+</html>
